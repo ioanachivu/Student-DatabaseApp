@@ -5,7 +5,7 @@ public class Student {
 	private String firstName;
 	private String lastName;
 	private int gradeYear;
-	private String courses;
+	private String courses= "";
 	private String studentID;
 	private int tuitionBalance=0;
 	private static int costOfCourse=600;
