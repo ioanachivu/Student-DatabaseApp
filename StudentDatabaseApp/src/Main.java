@@ -39,6 +39,7 @@ public class Main {
 		System.out.println("Enrolled in: " + s.getCourses());
 		System.out.println("Cost: " + s.getTuitionBalance());
 		System.out.println();
+		
 	}
 	
 	// view tuition balance  method
@@ -54,6 +55,7 @@ public class Main {
 		s.setTuitionBalance(s.getTuitionBalance()-amount);
 		
 		viewBalance(s);
+		input.close();
 	}
 	
 	// show info about a student
