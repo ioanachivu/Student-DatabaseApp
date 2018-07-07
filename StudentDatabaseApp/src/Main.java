@@ -1,25 +1,29 @@
+
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
 
-		Student student1 = new Student("John", "Snow", 2);
-		System.out.println(student1);
-
-		// Student student2 = new Student();
-		// System.out.println(student2);
+		// adding new students
+		System.out.println("How many students do you want to add?");
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		Student[] student = new Student[n];
 		
-		// enroll
-		enroll(student1);
+		for(int i=0;i<n;i++) {
+			student[i] = new Student();
+			// enroll
+			enroll(student[i]);
+			// pay tuition
+			payTuition(student[i]);
+		}
 		
-		// pay tuition
-		payTuition(student1);
-		
-		// show info
-		System.out.println();
-		showInfo(student1);
-		
+		for(int i=0;i<n;i++) {
+			showInfo(student[i]);
+		}
 	}
+	
+
 
 	// enrollment method
 	public static void enroll(Student s) {
